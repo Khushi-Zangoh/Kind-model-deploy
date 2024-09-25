@@ -64,7 +64,7 @@ spec:
             nvidia.com/gpu: "1"
         env: 
         - name: CUDA_VISIBLE_DEVICES
-          value: "1"
+          value: "0"
         volumeMounts:
         - mountPath: /root/.cache/huggingface
           name: cache-volume
