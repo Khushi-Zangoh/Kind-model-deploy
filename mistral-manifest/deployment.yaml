@@ -28,8 +28,8 @@ spec:
         - --model
         - TheBloke/Mistral-7B-Instruct-v0.2-AWQ
         - --gpu-memory-utilization
-        - "0.8"
-        - max_model_len
+        - "0.9"
+        - max-model-len
         - "32256"
         - --quantization=awq
         - --trust-remote-code
