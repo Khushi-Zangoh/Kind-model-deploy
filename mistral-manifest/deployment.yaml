@@ -64,10 +64,7 @@ spec:
             nvidia.com/gpu: "1"
         env: 
         - name: HUGGING_FACE_HUB_TOKEN
-          valueFrom:
-            secretKeyRef:
-              key: HUGGINGFACE_TOKEN
-              name: vllm-huggingface-token
+          value: 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
         - name: CUDA_VISIBLE_DEVICES
           value: "0"
         volumeMounts:
