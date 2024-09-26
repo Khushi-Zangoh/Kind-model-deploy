@@ -33,6 +33,8 @@ spec:
         - --trust-remote-code
         - --device 
         - "cpu"
+        - --dtype
+        - "float16"
         image: vllm/vllm-openai:latest
         imagePullPolicy: Always
         # livenessProbe:
