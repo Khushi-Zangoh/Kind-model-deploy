@@ -34,7 +34,7 @@ spec:
         - --device 
         - "cpu"
         - --dtype
-        - "float16"
+        - "half"
         image: vllm/vllm-openai:latest
         imagePullPolicy: Always
         # livenessProbe:
