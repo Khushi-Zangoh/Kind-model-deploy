@@ -28,40 +28,40 @@ spec:
         - --model
         - TheBloke/Mistral-7B-Instruct-v0.2-AWQ
         - --gpu-memory-utilization
-        - "0.7"
+        - "0.9"
         - --quantization=awq
         - --trust-remote-code
         image: vllm/vllm-openai:latest
         imagePullPolicy: Always
-        livenessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /health
-            port: 8000
-            scheme: HTTP
-          initialDelaySeconds: 240
-          periodSeconds: 5
-          successThreshold: 1
-          timeoutSeconds: 1
+        # livenessProbe:
+        #   failureThreshold: 3
+        #   httpGet:
+        #     path: /health
+        #     port: 8000
+        #     scheme: HTTP
+        #   initialDelaySeconds: 240
+        #   periodSeconds: 5
+        #   successThreshold: 1
+        #   timeoutSeconds: 1
         name: vllm-openai
         ports:
         - containerPort: 8000
           protocol: TCP
-        readinessProbe:
-          failureThreshold: 3
-          httpGet:
-            path: /health
-            port: 8000
-            scheme: HTTP
-          initialDelaySeconds: 240
-          periodSeconds: 5
-          successThreshold: 1
-          timeoutSeconds: 1
+        # readinessProbe:
+        #   failureThreshold: 3
+        #   httpGet:
+        #     path: /health
+        #     port: 8000
+        #     scheme: HTTP
+        #   initialDelaySeconds: 240
+        #   periodSeconds: 5
+        #   successThreshold: 1
+        #   timeoutSeconds: 1
         resources:
           limits:
-            nvidia.com/gpu: "1"
+            nvidia.com/gpu: "2"
           requests:
-            nvidia.com/gpu: "1"
+            nvidia.com/gpu: "2"
         env: 
         - name: HUGGING_FACE_HUB_TOKEN
           value: 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
