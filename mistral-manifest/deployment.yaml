@@ -28,7 +28,7 @@ spec:
         - --model
         - TheBloke/Mistral-7B-Instruct-v0.2-AWQ
         - --gpu-memory-utilization
-        - "0.8"
+        - "0.7"
         - --quantization=awq
         - --trust-remote-code
         image: vllm/vllm-openai:latest
@@ -63,6 +63,11 @@ spec:
           requests:
             nvidia.com/gpu: "1"
         env: 
+        - name: HUGGING_FACE_HUB_TOKEN
+          valueFrom:
+            secretKeyRef:
+              key: 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
+              name: vllm-huggingface-token
         - name: CUDA_VISIBLE_DEVICES
           value: "0"
         volumeMounts:
