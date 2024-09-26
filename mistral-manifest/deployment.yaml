@@ -66,7 +66,7 @@ spec:
         - name: HUGGING_FACE_HUB_TOKEN
           valueFrom:
             secretKeyRef:
-              key: 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
+              key: HUGGINGFACE_TOKEN
               name: vllm-huggingface-token
         - name: CUDA_VISIBLE_DEVICES
           value: "0"
