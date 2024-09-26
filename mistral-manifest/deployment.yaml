@@ -28,7 +28,7 @@ spec:
         - --model
         - TheBloke/Mistral-7B-Instruct-v0.2-AWQ
         - --gpu-memory-utilization
-        - "0.9"
+        - "0.8"
         - --quantization=awq
         - --trust-remote-code
         image: vllm/vllm-openai:latest
