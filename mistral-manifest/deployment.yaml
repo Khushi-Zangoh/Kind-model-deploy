@@ -68,7 +68,7 @@ spec:
         - name: HUGGING_FACE_HUB_TOKEN
           value: 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
         - name: CUDA_VISIBLE_DEVICES
-          value: "0"
+          value: "1"
         volumeMounts:
         - mountPath: /root/.cache/huggingface
           name: cache-volume
